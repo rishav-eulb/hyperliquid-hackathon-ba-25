@@ -1,8 +1,21 @@
-# Command Line Guide: Deployment to Bot Operations
-Demo: loom.com/share/e115472886834dcdadd14d5b556525f9
+---
 
+# **Command Line Guide: Deployment to Bot Operations**
 
-Complete step-by-step command line instructions for deploying contracts and running the GlueX optimization bot.
+🎥 **Demo Video:**
+**[Watch on Loom](https://loom.com/share/e115472886834dcdadd14d5b556525f9)**
+
+---
+
+This guide provides **complete, step-by-step command-line instructions** for:
+
+* Deploying smart contracts
+* Running the **GlueX Optimization Bot**
+* Managing rebalancing and operational workflows
+
+Follow this document to ensure a smooth deployment from development to production.
+
+---
 
 ---
 
