@@ -17,8 +17,6 @@ Follow this document to ensure a smooth deployment from development to productio
 
 ---
 
----
-
 ## Prerequisites
 
 ### 1. Install Node.js and Foundry
