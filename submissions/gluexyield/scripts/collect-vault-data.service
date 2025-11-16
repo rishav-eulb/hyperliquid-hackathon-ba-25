@@ -1,0 +1,28 @@
+[Unit]
+Description=GlueX Vault Data Collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=%i
+WorkingDirectory=/Users/rj39/Desktop/NexusNetwork/GLUEX/hackathon
+EnvironmentFile=/Users/rj39/Desktop/NexusNetwork/GLUEX/hackathon/.env
+ExecStart=/usr/bin/env python3 backend/db/collect_vault_data.py
+
+# Restart policy
+Restart=on-failure
+RestartSec=30
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=vault-data-collector
+
+[Install]
+WantedBy=multi-user.target
+

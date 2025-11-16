@@ -1,0 +1,32 @@
+[Unit]
+Description=GlueX Price Oracle Updater
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/Users/rj39/Desktop/NexusNetwork/GLUEX/hackathon
+EnvironmentFile=/Users/rj39/Desktop/NexusNetwork/GLUEX/hackathon/.env
+ExecStart=/usr/bin/env python3 scripts/price_oracle_updater.py
+
+# Restart policy - always restart if it crashes
+Restart=always
+RestartSec=30
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=price-oracle-updater
+
+# Resource limits (optional - adjust as needed)
+# MemoryMax=512M
+# CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target
+

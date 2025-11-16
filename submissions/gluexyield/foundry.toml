@@ -1,0 +1,34 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["node_modules"]
+solc_version = "0.8.20"
+
+# Optimizer settings
+optimizer = true
+optimizer_runs = 200
+
+# Additional settings
+via_ir = false
+bytecode_hash = "none"
+cbor_metadata = false
+
+# Testing
+verbosity = 3
+
+[fuzz]
+runs = 256
+
+# Remappings for dependencies
+remappings = [
+    "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/"
+]
+
+# RPC endpoints (use environment variables)
+[rpc_endpoints]
+hyperEVM = "${RPC_URL}"
+
+# Etherscan configuration (if available for HyperEVM)
+[etherscan]
+hyperEVM = { key = "${ETHERSCAN_API_KEY}", url = "https://explorer.hyperliquid.xyz/api" }
+
